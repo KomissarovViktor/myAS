@@ -1,0 +1,25 @@
+﻿@using AutomationSystem.Areas.Identity.Data;
+
+
+@model List<FixCategory>
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Categories</h1>
+
+@foreach (var category in Model)
+{
+    <div class="category-card">
+        <div class="category-title"><b>ID:</b> @category.Id</div>
+        <div class="category-description"><b>Description:</b> @category.Description</div>
+        <div class="category-title">
+            <form asp-controller="Order" asp-action="PlaceOrder" method="post">
+                <input type="hidden" name="id" value="@category.Id" />
+                <input type="submit" value="Замовити ремонт" />
+            </form>
+        </div>
+    </div>
+}
