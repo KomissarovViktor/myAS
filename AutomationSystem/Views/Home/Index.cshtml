@@ -1,4 +1,16 @@
-﻿@using AutomationSystem.Areas.Identity.Data;
+﻿@{
+    ViewData["Title"] = "Main page";
+}
+
+<h1 style="text-align:center; margin-right:10%;">Вітаємо<br>Ви знаходитесь на сайті майстерні EService</h1>
+
+@section MainPageImage{
+    <img src="/img/man.png" class="feature-img anim">
+}
+
+
+
+@* @using AutomationSystem.Areas.Identity.Data;
 
 
 @model List<FixCategory>
@@ -14,12 +26,13 @@
 {
     <div class="category-card">
         <div class="category-title"><b>ID:</b> @category.Id</div>
-        <div class="category-description"><b>Description:</b> @category.Description</div>
+        <div class="category-description"><b>Name:</b> @category.Description</div>
         <div class="category-title">
-            <form asp-controller="Order" asp-action="PlaceOrder" method="post">
-                <input type="hidden" name="id" value="@category.Id" />
-                <input type="submit" value="Замовити ремонт" />
-            </form>
-        </div>
+            <div>
+                <h4>@category.Description</h4>
+                <a asp-controller="Order" asp-action="PlaceOrder" asp-route-fixCategoryId="@category.Id">Create Order</a>
+            </div>
+         </div>
     </div>
 }
+ *@

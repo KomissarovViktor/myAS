@@ -1,6 +1,60 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @* <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" /> *@
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+   @*  <link rel="stylesheet" href="~/AutomationSystem.styles.css" asp-append-version="true" /> *@
+    <title>@ViewData["Title"] - AutomationSystem</title>
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <a asp-controller="Home" asp-action="Index"><img src="/img/logo.png" class="logo"></a>
+            <div class="space" style="display:flex; align-items: center; justify-content: space-between; width:100%;">
+            <ul>
+                <li><a asp-controller="Home" asp-action="Categories">Категорії Ремонту</a></li>
+                <li><a asp-controller="Order" asp-action="Order">Мої Замовлення</a></li>
+              
+                <li><a href="#">Privacy</a></li>
+                @if (User.IsInRole("Manager"))
+                {
+                    <li><a asp-controller="Manager" asp-action="OrderManaging">Управління замовленнями</a></li>
+                    <li><a asp-controller="Manager" asp-action="CategoryManaging">Управління Категоріями</a></li>
+                }
+                @if (User.IsInRole("Master"))
+                {
+                    <li><a asp-controller="Master" asp-action="Index">Вільні замовлення</a></li>
+                    <li><a asp-controller="Master" asp-action="Works">Мої Роботи</a></li>
+                }
+            </ul>
+
+            <partial name="_LoginPartial.cshtml">
+            @* <div>
+                <a class="login-btn" href="#">Log in</a>
+                <a class="btn" href="#">Sign up</a>
+            </div> *@
+            </div>
+        </nav>
+        <div class="main">
+            @RenderBody()
+            @RenderSection("MainPageImage", required: false)
+        </div>
+    </div>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+
+
+@*  *@
+@*<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - AutomationSystem</title>
@@ -41,7 +95,8 @@
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
+    <
+<script src="~/js/site.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-</html>
+</html> *@

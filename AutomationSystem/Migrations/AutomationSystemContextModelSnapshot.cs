@@ -99,6 +99,10 @@ namespace AutomationSystem.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<string>("ImagePath")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.HasKey("Id");
 
                     b.ToTable("FixCategories");
@@ -114,14 +118,14 @@ namespace AutomationSystem.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int>("FixCategoryId")
+                    b.Property<int?>("FixCategoryId")
+                        .IsRequired()
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("MasterId")
-                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<decimal>("Price")
+                    b.Property<decimal?>("Price")
                         .HasColumnType("TEXT");
 
                     b.Property<bool>("Status")
@@ -159,10 +163,6 @@ namespace AutomationSystem.Migrations
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Model")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Type")
                         .IsRequired()
                         .HasColumnType("TEXT");
 

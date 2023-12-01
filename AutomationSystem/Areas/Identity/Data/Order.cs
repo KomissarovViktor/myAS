@@ -16,16 +16,17 @@ namespace AutomationSystem.Areas.Identity.Data
         public Technik Technik { get; set; }
 
         [ForeignKey("FixCategory")]
-        public int FixCategoryId { get; set; }
+        public int? FixCategoryId { get; set; }
         public FixCategory FixCategory { get; set; }
 
         public DateTime data { get; set; }
 
         public bool Status { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
 
-        public string MasterId { get; set; }
+        public string? MasterId { get; set; }
+
 
     }
 }

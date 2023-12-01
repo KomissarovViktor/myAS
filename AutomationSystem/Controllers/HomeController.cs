@@ -1,4 +1,5 @@
-﻿using AutomationSystem.Data;
+﻿using AutomationSystem.Areas.Identity.Data;
+using AutomationSystem.Data;
 using AutomationSystem.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +20,15 @@ namespace AutomationSystem.Controllers
 
         public IActionResult Index()
         {
+            return View();
+        }
+
+        public IActionResult Categories()
+        {
             var Categories = _context.FixCategories.ToList();
+            IQueryable<Order> filteredOrders2 = from a in _context.Orders where a.Price >500 select a;
+            var filteredOrders = _context.Orders.Where(order => order.Price>500).OrderBy(n => n);
+            IQueryable < FixCategory > categories2= from a in _context.FixCategories where a.Id > 1 select a;
             return View(Categories);
         }
 

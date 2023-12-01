@@ -5,6 +5,14 @@
       "PackagePath": "staticwebassets\\AutomationSystem.bundle.scp.css"
     },
     {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\css\\categories.css",
+      "PackagePath": "staticwebassets\\css\\categories.css"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\css\\form_style.css",
+      "PackagePath": "staticwebassets\\css\\form_style.css"
+    },
+    {
       "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -15,6 +23,30 @@
     {
       "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\img\\07ugp5ljimc91.gif",
+      "PackagePath": "staticwebassets\\img\\07ugp5ljimc91.gif"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\img\\Repair2.png",
+      "PackagePath": "staticwebassets\\img\\Repair2.png"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\img\\back-img.png",
+      "PackagePath": "staticwebassets\\img\\back-img.png"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\img\\back.jpg",
+      "PackagePath": "staticwebassets\\img\\back.jpg"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\img\\man.png",
+      "PackagePath": "staticwebassets\\img\\man.png"
     },
     {
       "Id": "D:\\APPS\\VS Projects\\AutomationSystem\\AutomationSystem\\wwwroot\\js\\site.js",

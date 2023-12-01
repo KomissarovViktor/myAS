@@ -11,7 +11,7 @@ public class AutomationSystemContext : IdentityDbContext<AutomationSystemUser>
         : base(options)
     {
     }
-
+    public DbSet<AutomationSystemUser> AutomationSystemUsers { get; set; }
     public DbSet<FixCategory> FixCategories { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<Technik> Techniks { get; set; }
